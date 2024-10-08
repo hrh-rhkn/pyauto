@@ -13,11 +13,12 @@ if sys.platform !=  'win32':
 
 
 # Fixes the scaling issues where PyAutoGUI was reporting the wrong resolution:
+"""
 try:
    ctypes.windll.user32.SetProcessDPIAware()
 except AttributeError:
     pass # Windows XP doesn't support this, so just do nothing.
-
+"""
 
 """
 A lot of this code is probably repeated from win32 extensions module, but I didn't want to have that dependency.
